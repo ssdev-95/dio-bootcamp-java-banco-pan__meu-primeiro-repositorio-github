@@ -1,8 +1,7 @@
 public class Stacko<T> {
-	private Nodo<T> topStackNodoRef = null;
+	private Nodo<T> topStackNodoRef;
 
-	public Stacko() { }
-
+	public Stacko() { this.topStackNodoRef = null; }
 
 	public void push(Nodo<T> nodo) {
 		nodo.setNextNodo(this.topStackNodoRef);
@@ -15,9 +14,7 @@ public class Stacko<T> {
 		return nodoRefAux;
 	}
 
-	public Nodo<T> top() {
-		return this.topStackNodoRef;
-	}
+	public Nodo<T> top() { return this.topStackNodoRef; }
 
 	@Override
 	public String toString() {

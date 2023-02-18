@@ -7,21 +7,13 @@ public class Nodo<T extends Object> {
 		this.nextNodo = null;
 	}
 
-	public void setNextNodo(Nodo<T> nodo) {
-		this.nextNodo = nodo;
-	}
+	public void setNextNodo(Nodo<T> nodo) { this.nextNodo = nodo; }
 
-	public Nodo<T> getNextNodo() {
-		return nextNodo;
-	}
+	public Nodo<T> getNextNodo() { return nextNodo; }
 
-	public void setContent(T content) {
-		this.content = content;
-	}
+	public void setContent(T content) { this.content = content; }
 
-	public T getContent() {
-		return content;
-	}
+	public T getContent() { return content; }
 
 	@Override
 	public String toString() {

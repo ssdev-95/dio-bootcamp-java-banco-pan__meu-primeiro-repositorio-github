@@ -1,3 +1,5 @@
+package com.saloma.tech;
+
 public class Nodo<T extends Object> {
 	private T content;
 	private Nodo<T> nextNodo;

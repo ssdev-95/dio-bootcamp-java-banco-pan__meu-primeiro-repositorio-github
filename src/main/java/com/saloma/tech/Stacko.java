@@ -1,3 +1,5 @@
+package com.saloma.tech;
+
 public class Stacko<T> {
 	private Nodo<T> topStackNodoRef;
 

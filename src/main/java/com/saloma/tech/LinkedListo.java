@@ -1,3 +1,5 @@
+package com.saloma.tech;
+
 public class LinkedListo<T> {
 	private Nodo<T> entryReference;
 

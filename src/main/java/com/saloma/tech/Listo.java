@@ -1,3 +1,5 @@
+package com.saloma.tech;
+
 public class Listo<T> {
 	private Nodo<T> lastNoduRef;
 

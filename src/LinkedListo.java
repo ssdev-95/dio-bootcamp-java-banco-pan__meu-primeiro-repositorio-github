@@ -45,18 +45,12 @@ public class LinkedListo<T> {
 		validateIndex(index);
 
 		Nodo<T> nodoRefAux = this.entryReference;
-		Nodo<T> nodoResult = null;
 
-		for(int idx = 0; idx < size(); idx++) {
-			if(idx == index) {
-				nodoResult = nodoRefAux;
-				break;
-			}
-
+		for(int idx = 0; idx < index; idx++) {
 			nodoRefAux = nodoRefAux.getNextNodo();
 		}
 
-		return nodoResult;
+		return nodoRefAux;
 	}
 
 	private void validateIndex(int index)

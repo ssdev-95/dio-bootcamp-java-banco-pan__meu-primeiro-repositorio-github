@@ -9,8 +9,14 @@ public class Main {
 		for(int i=0; i<6; i++) { listo.add(i); }
 		System.out.println(listo);
 
-		// TODO: Removes list item at index 3;
+		listo.remove(2);
+		System.out.println(listo);
+
 		listo.remove(3);
+		System.out.println(listo);
+
+		listo.remove(0);
+
 		System.out.println(listo);
 	}
 }

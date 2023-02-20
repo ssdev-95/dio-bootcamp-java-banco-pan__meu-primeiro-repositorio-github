@@ -11,9 +11,16 @@ public class Main {
 		DoubleLinkedListo<Object> listo;
 		listo = new DoubleLinkedListo<>();
 
-		listo.add(3);
-		listo.add(5);
+		try {
+			listo.add(3);
+  		listo.add(5);
+			listo.add(999);
+  		System.out.println(listo);
 
-		System.out.println(listo.size());
+			listo.remove(1);
+			System.out.println(listo);
+		} catch(Exception exception) {
+			System.out.println(exception);
+		}
 	}
 }

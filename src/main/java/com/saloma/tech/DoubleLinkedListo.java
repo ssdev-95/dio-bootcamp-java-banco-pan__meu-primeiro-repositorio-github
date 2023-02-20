@@ -6,6 +6,8 @@
 
 package com.saloma.tech;
 
+import java.security.spec.ECFieldF2m;
+
 public class DoubleLinkedListo<T> {
 	private DoubleNodo<T> firstNodoRef;
 	private DoubleNodo<T> lastNodoRef;
@@ -57,8 +59,12 @@ public class DoubleLinkedListo<T> {
 		this._size++;
 	}
 
-	public void remove(int index) throws IndexOutOfBoundsException {
-		validateIndex(index);
+	public void remove(int index)
+			throws IndexOutOfBoundsException, Exception {
+		if(isEmpty()) {
+			String log = "Cannot remove items from empty list!";
+			throw new Exception(log);
+		}
 
 		if(index == 0) {
 			firstNodoRef = firstNodoRef.getNextNodo();
@@ -86,7 +92,7 @@ public class DoubleLinkedListo<T> {
 	private DoubleNodo<T> getNodo(int index)
 			throws IndexOutOfBoundsException {
 		validateIndex(index);
-		DoubleNodo<T> nodoAux = null;
+		DoubleNodo<T> nodoAux = firstNodoRef;
 
 		for(int i = 0; (i < index) && (nodoAux != null); i++) {
 			nodoAux = nodoAux.getNextNodo();
@@ -106,6 +112,10 @@ public class DoubleLinkedListo<T> {
 	public int size() { return this._size; }
 
 	public boolean isEmpty() { return this.firstNodoRef == null; }
+
+	public T first() { return this.firstNodoRef.getContent(); }
+
+	public T last() { return this.lastNodoRef.getContent(); }
 
 	@Override
 	public String toString() {

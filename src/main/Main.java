@@ -1,22 +1,22 @@
-import com.saloma.tech.DoubleLinkedListo;
+import com.saloma.tech.RoundedListo;
 
 public class Main {
 	public static void main(String[] args) {
-		DoubleLinkedListo<Integer> listo;
-		listo = new DoubleLinkedListo<>();
+		RoundedListo<Integer> listo = new RoundedListo<>();
+
+		for(int i = 0; i < 10; i++) {
+			listo.add(i+1);
+		}
+
+		System.out.println(listo);
 
 		try {
-			for(int i = 0; i < 4; i++) {
-				listo.add(i);
-			}
-
-  		System.out.println(listo);
-
-			listo.add(2, 1024);
+			listo.remove(3);
 			System.out.println(listo);
 
-			listo.remove(1);
+			listo.remove(listo.size() - 1);
 			System.out.println(listo);
+			System.out.println(listo.size());
 		} catch(Exception exception) {
 			System.out.println(exception);
 		}

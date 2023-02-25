@@ -1,4 +1,10 @@
-clear && javac -verbose --class-path src/main/java ./src/main/Main.java -Xlint:unchecked -d bin
+
+
+
+
+
+
+clear && javac -verbose ./src/main/Main.java -Xlint:unchecked -d bin --class-path src/main
 
 cd bin
 
